@@ -1,0 +1,35 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/css/home_page_style.css">
+    </head>
+    <body>
+        {% block content %}
+        <header>
+            <div class="NavigationPanel">Navigation</div>
+            <div class="NavigationPanel"><img src="../static/sprites/backgrounds/metrotypoThing.jpg" height="50" width="100" alt=""></div>
+            <div class="NavigationPanel"><a href="/profile">User</a></div>
+        </header>
+        <section id="MotivationPhrases">
+            <div><h1>{{motivation_phrase}}</h1></div>
+        </section>
+        <section id="Homework">
+            <header id="HomeWorkTitle">
+                <h2>{{HomeWorkTitle}}:</h2>
+            </header>
+            <section id="HomeworkTasks">
+                <ul>
+                    {% for lesson in list(lessons.keys()) %}
+                        <li><h3>{{lessons[lesson]}}</h3></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </section>
+        <section id="NewsFromGrade">
+            <header id="Chat">
+                <h1><strong>So this is totaly Just Chat</strong></h1>
+            </header>
+        </section>
+        {% endblock %}
+    </body>
+</html>
