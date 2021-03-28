@@ -9,15 +9,12 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'expiredy_key'
 
 
-def load_info():
-    return "YOS"
-
 @app.route("/")
 def distribution_page():
     return redirect("/login")
 
-@app.route("/login", methods=['POST'])
-def login_page():
+@app.route("/login")
+def login_page():p
     return render_template("login.html")
 
 
@@ -38,7 +35,6 @@ def main():
     run_with_ngrok(app)
     app.run()
 
-
 """
 Моя цель - создать удобный в использовании сайт для обмена информацией между школьниками и их учителями:
 1. Странички, котрые я хочу реализовать:
@@ -57,7 +53,6 @@ def main():
     3.1 База данных с уроками и домашними заданиями 
     3.1 База данных с оценками учеников 
 """
-
 
 if __name__ == '__main__':
     main()
