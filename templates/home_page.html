@@ -2,10 +2,12 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../static/css/home_page_style.css">
+        <link rel="stylesheet" href="../static/css/chat.css">
     </head>
     <body>
         {% block content %}
         <header>
+            <div class="NavigationPanel"><object type="text/html" data="message_icon.html"></object></div>
             <div class="NavigationPanel">Navigation</div>
             <div class="NavigationPanel"><img src="../static/sprites/backgrounds/metrotypoThing.jpg" height="50" width="100" alt=""></div>
             <div class="NavigationPanel"><a href="/profile">User</a></div>
@@ -28,6 +30,9 @@
         <section id="NewsFromGrade">
             <header id="Chat">
                 <h1><strong>So this is totaly Just Chat</strong></h1>
+                <div class="email_wrapper">
+                    <input class="email" id="email" type="email" placeholder="Email">
+                  </div>
             </header>
         </section>
         {% endblock %}

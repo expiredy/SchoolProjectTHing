@@ -1,0 +1,69 @@
+<html lang="rus">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animated SVG Button</title>
+    <style>
+        :root{
+            --dark-color: "#8D0000";
+            --light-color: "#720C0C";
+        }
+
+        svg{
+            cursor: pointer;
+        }
+
+        #messageRed,
+        #messageDarker,
+        #TheDarkestMessage{
+            transition: all 1s ease;
+        }
+
+        #TheDarkestMessage{
+            transform: translateY(-100%);
+        }
+
+        svg:hover #messageRed{
+            transform: translateY(-30%);
+
+        }
+
+    </style>
+    
+    </head>
+    <body>
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Frame 1" clip-path="url(#clip0)">
+                <g id="lightGroup">
+                    <g id="messageDarker">
+                        <ellipse id="Ellipse 15" cx="56" cy="97" rx="36" ry="20" fill="#8D0000"/>
+                        <path id="Polygon 14" d="M93.9716 117.679L77.4391 109.954L89.4381 100.003L93.9716 117.679Z" fill="#8D0000"/>
+                    </g>
+                    <g id="TheDarkestMessage">
+                        <ellipse id="Ellipse 13" cx="56" cy="57" rx="36" ry="20" fill="#720C0C"/>
+                        <path id="Polygon 12" d="M93.9716 77.6794L77.4391 69.9544L89.4381 60.0033L93.9716 77.6794Z" fill="#720C0C"/>
+                    </g>
+                </g>
+                <g id="DarkGroup">
+                    <g id="messageRed">
+                        <ellipse id="Ellipse 12" cx="56" cy="97" rx="36" ry="20" fill="#FF0000"/>
+                        <path id="Polygon 11" d="M93.9716 117.679L77.4391 109.954L89.4381 100.003L93.9716 117.679Z" fill="#FF0000"/>
+                    </g>
+                </g>
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="120" height="120" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <script>
+            const svg = document.getElementById('triangles');
+    
+            svg.onclick = (e) => {
+                
+            }
+    
+          </script>
+    </body>    
+</html>

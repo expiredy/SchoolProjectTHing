@@ -16,7 +16,7 @@ def load_info():
 def distribution_page():
     return redirect("/login")
 
-@app.route("/login")
+@app.route("/login", methods=['POST'])
 def login_page():
     return render_template("login.html")
 
