@@ -14,7 +14,7 @@ def distribution_page():
     return redirect("/login")
 
 @app.route("/login")
-def login_page():p
+def login_page():
     return render_template("login.html")
 
 
@@ -22,14 +22,16 @@ def login_page():p
 def page_of_grade():
     return render_template("profile.html")
 
+@app.route("/chat")
+def chat_paqe():
+    return render_template("chat_page.html")
+
 @app.route("/home")
 def home_page():
     lessons = {}
     return render_template("home_page.html", HomeWorkTitle=MotivationPhrase, lessons=lessons, list=list)
 
-@app.route("/chat")
-def chat_paqe():
-    return render_template("chat_page.html")
+@app.route("/")
 
 def main():
     run_with_ngrok(app)
