@@ -30,6 +30,10 @@ def home_page():
     lessons = {}
     return render_template("home_page.html", HomeWorkTitle=MotivationPhrase, lessons=lessons, list=list)
 
+@app.route("/chat")
+def chat_paqe():
+    return render_template("chat_page.html")
+
 def main():
     run_with_ngrok(app)
     app.run()

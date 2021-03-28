@@ -6,4 +6,5 @@ class list(list):
         return random.choice(self)
 
 ChatTitle = 'Chat'
+
 MotivationPhrase = list(["HaHa Let's go", "U can do it"])
